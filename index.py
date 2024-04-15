@@ -124,7 +124,7 @@ html = """
 </main>
 
 <footer>
-            Copyright ©  楊荃喜. All Rights Reserved.
+            Copyright ©  楊荃喜. 許祥順. All Rights Reserved.
 </footer>
 </body>
 </html>
