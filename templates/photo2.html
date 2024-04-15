@@ -1,0 +1,272 @@
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>照片牆</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		header, footer, nav {
+			text-align: center;
+			padding: 10pX;
+			margin: 10pX;
+		}
+		header {
+			background-image: url("/static/po.jpg");
+			animation: example1;
+			animation-duration: 4s;
+			animation-iteration-count: 1;
+		}
+		
+		@keyframes example1 {
+			from {
+				transform: rotate(-15deg) translateY(-100%);
+				opacity: 0;
+			}
+			to {
+				transform: rotate(0deg) translateY(0%);
+				opacity: 1;
+			}
+		}
+
+		nav , footer {
+			background-image: url("/static/ot.jpg");
+		}
+
+
+		body{
+			margin: 0;
+			font-family: 'Noto Sans TC', sans-serif;
+		}
+
+		.row {
+			display: flex;
+			padding: 0 4px;
+			flex-wrap: wrap;
+		}
+
+		.column {
+			flex: 25%;
+			max-width: 25%;
+			padding: 0 4px;
+		}
+
+		.column img {
+			margin-top: 8px;
+			vertical-align: middle;
+		}
+
+
+		.item {
+			width: 100%;
+			position: relative;
+		}
+
+		.item img {
+			width: 100%;
+			vertical-align: middle;
+		}
+		.item .text {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			padding: 20px;
+			background-color: rgba(245, 245, 220, 0.8);
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			opacity: 0;
+			transition: opacity .5s ;
+		}
+		.item:hover .text {
+			opacity: 1;
+		}
+		.item h2 {
+			font-size: 40px;
+			color:#f0ae7f;
+			font-weight: 500;
+			text-align: center
+		}
+		h2 {
+			text-shadow: 2px 2px white;
+		}
+		h1, h3 {
+			color:#0e28eb;
+		}
+		h3::before {content:"\1F320"; }
+		h1::before {content:"\1F496"; }
+
+
+		 @media (max-width: 800px) {
+		 	.column {
+		 		flex: 50%;
+		 	    max-width: 50%;
+		 	}	
+		 }
+
+		  @media (max-width: 600px) {
+		 	.column {
+		 		flex: 100%;
+		 		max-width: 100%;
+		 	}	
+		 }
+
+	</style>
+</head>
+
+
+<body>
+<header>
+	<h3 > Our Photo</h3>
+	<h1>Love Photo Wall 2024</h1>
+</header>
+<nav>
+		<a href ="/photo2" >照片牆2</a> |
+		<a href ="/play" >澎湖一日遊</a> 
+</nav>
+<hr>
+	<section class ="row">
+	<section class ="column">
+		<div class="item">
+			<img src = "static/1.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>一月去大買家</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/12.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月中臺科大</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/16.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月蝙蝠橋</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/111.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月審計新村</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/115.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月審計新村</h2>
+				</div>
+		</div>
+
+	</section>
+
+	<section class ="column">
+		<div class="item">
+			<img src = "static/10.jpg" width ="300">	
+				<div class ='text'>
+					<h2>24/01月吃仙草</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/13.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月蝙蝠橋</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/17.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月麗水漁港</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/112.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月審計新村</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/2.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/02月逢甲</h2>
+				</div>
+		</div>
+	</section>
+
+
+	<section class ="column">
+		<div class="item">
+			<img src = "static/10.1.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月吃仙草</h2>
+				</div>
+		</div>
+
+			<div class="item">
+			<img src = "static/14.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月蝙蝠橋</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/18.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月麗水漁港</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/113.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月審計新村</h2>
+				</div>
+		</div>
+
+	</section>
+
+	<section class ="column">
+				<div class="item">
+			<img src = "static/11.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月大慶夜市</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/15.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月蝙蝠橋</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/19.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月麗水漁港</h2>
+				</div>
+		</div>
+
+		<div class="item">
+			<img src = "static/114.jpg" style = "width: 100%;">	
+				<div class ='text'>
+					<h2>24/01月審計新村</h2>
+				</div>
+		</div>
+	</section>
+	</section>
+
+
+<footer>
+			Copyright ©  楊荃喜. All Rights Reserved.
+</footer>
+</body>
