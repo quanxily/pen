@@ -139,6 +139,43 @@
 		 	height: 2px;
 		 	background-color: #faabaa;
 		 }
+
+		   @media screen and (max-width: 768px) {
+		  .grid-container {
+		    grid-template-areas: 
+		      'header'
+		      'nav'
+		      'left'
+		      'middle'
+		      'right'
+		      'footer';
+		  }
+
+		  .left, .middle, .right {
+		    grid-area: unset;
+		  }
+		}
+
+		/* Responsive layout for even smaller screens */
+		@media screen and (max-width: 480px) {
+		  .grid-container {
+		    grid-template-areas: 
+		      'header'
+		      'nav'
+		      'middle'
+		      'right' /* Changed the order to ensure "right" comes before "footer" */
+		      'footer';
+		  }
+
+		  .left, .middle, .right {
+		    margin: 0;
+		  }
+
+		  .left, .right {
+		    display: none; /* Hiding the left and right sections on smaller screens */
+		  }
+		}
+
 	</style>
 
 </head>
@@ -150,7 +187,9 @@
 		</header>
 
 		<nav>
+			<a href ="/" >首頁</a> |
 			<a href ="/photo2" >照片牆2</a> |
+			<a href ="/photo3" >週年照片牆</a> |
 			<a href ="/play" >澎湖一日遊</a>  
 		</nav>
 
@@ -189,7 +228,7 @@
 		</aside>
 
 		<footer>
-			Copyright ©  楊荃喜. All Rights Reserved.
+			Copyright ©  楊荃喜. 許翔順. All Rights Reserved.
 		</footer>
 	</main>
 </body>

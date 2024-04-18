@@ -66,7 +66,7 @@ html = """
             padding: 12px;
         }
 
-        .colum.side {
+         .colum.side {
             flex: 1;
             background-image: url("/static/le.jpg");
             padding: 10px;
@@ -101,7 +101,7 @@ html = """
 
 <body>
 <header>
-    <h1>我和翔順寶寶旅遊網站</h1>
+    <h1>我和翔順寶寶旅遊和照片網站</h1>
 </header>
 
 <main>
@@ -116,6 +116,7 @@ html = """
 
             <div class="colum middle">
                 <h4>照片牆</h4>
+                <p><a href ="/photo3">週年照片牆</a></p> 
                 <p><a href ="/photo2">照片牆2024</a></p> 
                 <img src = "static/hug.jpg" width ="350"> 
             </div>
@@ -124,7 +125,7 @@ html = """
 </main>
 
 <footer>
-            Copyright ©  楊荃喜. 許祥順. All Rights Reserved.
+            Copyright ©  楊荃喜. 許翔順. All Rights Reserved.
 </footer>
 </body>
 </html>
@@ -144,6 +145,11 @@ def photo2():
 @app.route("/play")
 def play():
     return render_template("play.html")
+
+
+@app.route("/photo3")
+def photo3():
+    return render_template("photo3.html")
 
 #if __name__ == "__main__":
 #  app.run()
