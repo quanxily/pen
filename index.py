@@ -117,7 +117,8 @@ html = """
             <div class="colum middle">
                 <h4>照片牆</h4>
                 <p><a href ="/photo3">週年照片牆</a></p> 
-                <p><a href ="/photo2">照片牆2024</a></p> 
+                <p><a href ="/photo2">照片牆2024</a></p>
+                <p><a href ="/test">測試</a></p>  
                 <img src = "static/hug.jpg" width ="350"> 
             </div>
         </section>
@@ -150,6 +151,10 @@ def play():
 @app.route("/photo3")
 def photo3():
     return render_template("photo3.html")
+
+@app.route("/test")
+def test():
+    return render_template("test.html")
 
 #if __name__ == "__main__":
 #  app.run()
