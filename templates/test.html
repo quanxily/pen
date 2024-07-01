@@ -111,6 +111,17 @@
             background-color: rgba(0,0,0,0.8);
         }
 
+
+        .text {
+            color: pink;
+            font-size: 35px;
+            padding: 50px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
         .dot {
             cursor: pointer;
             height: 15px;
@@ -126,24 +137,24 @@
             background-color: #717171;
         }
 
-        #myTop {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: #970303;
-            color: beige;
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 50%;
+       #myTop {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: pink; /* Set a background color */
+            color: black; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 25px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
         }
 
         #myTop:hover {
-            background-color: #424242;
+            background-color: beige; /* Add a dark-grey background on hover */
         }
 
         footer {
@@ -162,10 +173,59 @@
         footer a:hover {
             color: pink;
         }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .colum {
+            padding: 10px;
+        }
+
+        .colum.side {
+            flex: 1;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .colum.middle {
+            flex: 1;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
     </style>
 </head>
 
 <body>
+    <button onclick="topFunction()" id="myTop" title="Go to top">Top</button>
+
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("myTop");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
     <nav id="myTopnav" class="topnav">
         <div class="nav-left">T AND Q LOVE</div>
         <div class="nav-right" id="nav-right">
@@ -177,25 +237,30 @@
         </div>
     </nav>
 
-    <header class="slideshow-container">
+       <header class="slideshow-container">
         <div class="mySlideshows fade">
             <img src="static/428.jpg" style="width: 100%;">
+            <div class="text">我們的愛情生活 -1</div>
         </div>
 
         <div class="mySlideshows fade">
             <img src="static/112.jpg" style="width: 100%;">
+            <div class="text">我們的愛情生活 - 2</div>
         </div>
 
         <div class="mySlideshows fade">
             <img src="static/113.jpg" style="width: 100%;">
+            <div class="text">我們的愛情生活 - 3</div>
         </div>
 
         <div class="mySlideshows fade">
             <img src="static/14.jpg" style="width: 100%;">
+            <div class="text">我們的愛情生活 - 4</div>
         </div>
 
         <div class="mySlideshows fade">
             <img src="static/15.jpg" style="width: 100%;">
+            <div class="text">我們的愛情生活 - 5</div>
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -210,7 +275,7 @@
         </div>
     </header>
 
-    <script>
+     <script>
         function navFunction() {
             var x = document.getElementById("nav-right");
             if (x.className === "nav-right") {
@@ -247,16 +312,29 @@
             dots[slideIndex-1].className += " active";
         }
     </script>
+    <main>
+        <article>
+        <section class="row">
+            <div class ="colum side">
+                <h3>我們的ig共同帳號</h3>
+                
+            </div>
+                
+            <div class ="colum middle">
+                <h3>運動紀錄片</h3>
+                <p style="color:#f2a30f">下面是我與寶寶一起健身的影片</p>
+                
+            </div>
 
-    <button onclick="topFunction()" id="myTop" title="top">Top</button>
+            <div class="colum side">
+                <h2>健身前後的感受</h2>
+                <p style="color:#c16fd1">學員:荃喜寶寶想對教練翔順寶寶說的話:謝謝你對我耐心的訓練以及買奶昔給我增重,寶寶在訓練我時我真的覺得好折磨,畢竟我是個不愛運動的人,但遇到你我慈知道運動的有趣,謝謝你我會努力好好練出我的馬甲線的</p>
 
-     <script>
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
+                <p style="color:#f2a30f">寶寶想對學員說的話以及教人的心得:</p>
+            </div>
+        </section>
+    </article>
+    </main>
     <footer>
         <a href="https://www.instagram.com/tq.__1314/"><i class="fa-brands fa-instagram-square"></i>Ig</a>
         <a href="https://www.youtube.com/embed/IjbA3drystA"><i class="fas fa-play-circle"></i>yt1</a>
@@ -265,4 +343,10 @@
     </footer>
 </body>
 </html>
+
+
+
+
+
+
 

@@ -135,29 +135,11 @@
             background-color: #717171;
         }
 
-        #myTop {
-            display: block;
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: #970303;
-            color: beige;
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 50%;
-        }
-
-        #myTop:hover {
-            background-color: #424242;
-        }
     </style>
 </head>
 
 <body>
+
     <nav id="myTopnav" class="topnav">
         <div class="nav-left">T AND Q LOVE</div>
         <div class="nav-right" id="nav-right">
@@ -169,30 +151,30 @@
         </div>
     </nav>
 
-    <header class="slideshow-container">
+   <header class="slideshow-container">
         <div class="mySlideshows fade">
             <img src="static/428.jpg" style="width: 100%;">
-            <div class="text">我們的愛情生活</div>
+            <div class="text">我們的愛情生活 - 圖片1</div>
         </div>
 
         <div class="mySlideshows fade">
             <img src="static/112.jpg" style="width: 100%;">
-            <div class="text">我們的愛情生活</div>
+            <div class="text">我們的愛情生活 - 圖片2</div>
         </div>
 
         <div class="mySlideshows fade">
             <img src="static/113.jpg" style="width: 100%;">
-            <div class="text">我們的愛情生活</div>
+            <div class="text">我們的愛情生活 - 圖片3</div>
         </div>
 
         <div class="mySlideshows fade">
             <img src="static/14.jpg" style="width: 100%;">
-            <div class="text">我們的愛情生活</div>
+            <div class="text">我們的愛情生活 - 圖片4</div>
         </div>
 
         <div class="mySlideshows fade">
             <img src="static/15.jpg" style="width: 100%;">
-            <div class="text">我們的愛情生活</div>
+            <div class="text">我們的愛情生活 - 圖片5</div>
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -244,15 +226,7 @@
             dots[slideIndex-1].className += " active";
         }
     </script>
-
-    <button onclick="topFunction()" id="myTop" title="Go to top">Top</button>
-
-    <script>
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
+</body>
+</html>
 </body>
 </html>
