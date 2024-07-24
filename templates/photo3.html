@@ -31,10 +31,69 @@
 			}
 		}
 
-		nav , footer {
+	    footer {
 			background-image: url("/static/ot.jpg");
 		}
 
+		nav  {
+			background-image: url("/static/ot.jpg");
+			display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            padding: 0 10px;
+		}
+
+		.nav-left {
+            font-size: 17px;
+            color: black;
+            text-decoration: underline pink 20%;
+        }
+
+        .nav-right {
+            display: flex;
+        }
+
+        nav a.active {
+            background-color: beige;
+            color: black;
+        }
+        
+        .nav-right a {
+            display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            font-size: 17px;
+            text-shadow: 2px 2px pink;
+        }
+
+        @media (max-width: 800px) {
+            .nav-right a:not(:first-child) {
+                display: none;
+            }
+            .nav-right a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-right.responsive {
+                position: relative;
+            }
+            .nav-right.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .nav-right.responsive a {
+                float: none;
+                display: block;
+                text-align: right;
+            }
+        }
 
 		body{
 			margin: 0;
@@ -168,12 +227,16 @@
 	<h3 > Our Photo</h3>
 	<h1>  anniversary   </h1>
 </header>
-<nav>
-		<a href ="/" >首頁</a> |
-		<a href ="/photo2" >照片牆2</a> |
-		<a href ="/photo3" >週年照片牆</a> |
-		<a href ="/play" >澎湖一日遊</a> 
-</nav>
+ <nav id="myTopnav" class="topnav">
+        <div class="nav-left">週年照片</div>
+        <div class="nav-right" id="nav-right">
+            <a href="/" class="active">首頁</a>
+            <a href="/photo2">照片牆2</a>
+            <a href="/photo3">週年照片牆</a>
+            <a href="/play">澎湖一日遊</a>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
+        </div>
+   </nav>
 <hr>
 	<section class ="row">
 	<section class ="column">

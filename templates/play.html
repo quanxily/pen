@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>澎湖一日遊</title>
 
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
 	<style type="text/css">
 		header, footer, nav {
 			text-align: center;
@@ -38,7 +40,65 @@
 
 		nav {
 			background-image: url("/static/ay.jpg");
+			grid-area: nav;
+			 display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            padding: 0 10px;
 		}
+
+		.nav-left {
+            font-size: 17px;
+            color: black;
+            text-decoration: underline pink 20%;
+        }
+
+        .nav-right {
+            display: flex;
+        }
+
+        nav a.active {
+            background-color: beige;
+            color: black;
+        }
+        
+        .nav-right a {
+            display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            font-size: 17px;
+            text-shadow: 2px 2px pink;
+        }
+
+        @media (max-width: 800px) {
+            .nav-right a:not(:first-child) {
+                display: none;
+            }
+            .nav-right a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-right.responsive {
+                position: relative;
+            }
+            .nav-right.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .nav-right.responsive a {
+                float: none;
+                display: block;
+                text-align: right;
+            }
+        }
+
 		.grid-container {
 			display: grid;
 			grid-template-areas: 
@@ -54,9 +114,7 @@
 			grid-area: header;
 			background-color: #faabaa;
 		}
-		nav {
-			grid-area: nav;
-		}
+
 
 		.left, .middle, .right {
 			padding: 10px;
@@ -130,8 +188,17 @@
 		 	border-width: 6px;
 		 	background-color: #e99dfa;
 		 }
+
+		 h4 {
+		 	text-align: center;
+		 	border-style: dotted;
+		 	border-color: #f7f5ab;
+		 	border-radius: 12px;
+		 	border-width: 6px;
+		 }
 		 p::after {content:"\1F6A2"}
 		 h3::before {content:"\1F493"}
+		 h4::before {content:"\1F493"}
 		 h2::before {content:"\1F361"}
 		 h2:after {content:"\1F340"}
 		 h1::before {content:"\1F386"}
@@ -170,11 +237,7 @@
 		  .left, .middle, .right {
 		    margin: 0;
 		  }
-
-		  .left, .right {
-		    display: none; /* Hiding the left and right sections on smaller screens */
-		  }
-		}
+		 }
 
 		 #myTop {
             display: none; /* Hidden by default */
@@ -232,49 +295,102 @@
 			<p >與寶寶家人們第一次去離島玩</p>
 		</header>
 
-		<nav>
-			<a href ="/" >首頁</a> |
-			<a href ="/photo2" >照片牆2</a> |
-			<a href ="/photo3" >週年照片牆</a> |
-			<a href ="/play" >澎湖一日遊</a>  
-		</nav>
+		 <nav id="myTopnav" class="topnav">
+        <div class="nav-left">澎湖</div>
+        <div class="nav-right" id="nav-right">
+            <a href="/" class="active">首頁</a>
+            <a href="/photo2">照片牆2</a>
+            <a href="/photo3">週年照片牆</a>
+            <a href="/play">澎湖一日遊</a>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
+        </div>
+    	</nav>
 
 		<hr>
 
 		<aside class="left">
-					<h3>關於澎湖</h3>
+					<h3>澎湖影片</h3>
+					<iframe src="https://www.youtube.com/embed/ehSG1cPCd6M" allowfullscreen width="300" ></iframe>
 					<h3>好景推薦</h3>
+					<h4>玩的</h4>
+					<a href="https://www.trueroll.com.tw/"><p>吉貝島海上樂園</p></a>
+					<a href="https://www.trueroll.com.tw/"><p>海上皇宮海洋牧場</p></a>
+					<a href="https://www.trueroll.com.tw/"><p>海底浮淺</p></a>
+					<a href="https://www.trueroll.com.tw/"><p>HPLUS</p></a>
+					<a href="https://www.trueroll.com.tw/"><p>跨海大橋</p></a>
+					<h4>吃的</h4>
+					<a href="https://www.trueroll.com.tw/"><p>紫玉仙草</p></a>
+					<a href="https://www.trueroll.com.tw/"><p>易家仙人掌冰淇淋</p></a>
+					<a href="https://www.trueroll.com.tw/"><p>二信飯糰創始店</p></a>
 		</aside>
 
 		<section class="middle">
-			<h2>馬路益燒肉飯-小管麵線</h2>
+
 			<h2>紫玉仙草</h2>
+			<p>很好吃且早上的時候九已經大排長龍,到下午去買的時候也一樣是大排長龍,八仙冰和八仙凍是他們家的招牌,很多人去那都點這兩個來吃,八仙冰底下鋪著
+			仙草冰加上料和淋上奶油球,吃起來好吃又順口.八仙凍下面鋪著仙草凍加上料和奶油球,吃起來也很好吃,但是忘記拍照了所以就沒有照片可欣賞了,不過
+		    側欄的好景推薦會放上連結可以去看看</p>
+
 			<h2>澎湖生活博物館</h2>
+			<img src = "static/79.jpg" width ="300" height="350">
+
 			<h2>海上皇宮海洋牧場</h2>
+			<img src = "static/75.jpg" width ="300" height="400">
+
 			<h2>觀音亭晚會現場</h2>
+			<img src = "static/75.jpg" width ="300" height="400">
+
 			<h2>二信飯糰創始店</h2>
-			<h2>赤崁漁港</h2>
+
+
+
 			<h2>吉貝海上樂園</h2>
+			<img src = "static/72.jpg" width ="400" height="350">
+			<img src = "static/77.jpg" width ="300" height="400">
+
 			<h2>星光港灣BBQ</h2>
+
 			<h2>澎湖水族館</h2>
+			<img src = "static/711.jpg" width ="300" height="350">
+			<img src = "static/712.jpg" width ="300" height="350">
+
 			<h2>東港舊碼頭天堂路</h2>
+			<img src = "static/7.jpg" width ="300" height="400">
+
 			<h2>後寮沙灘</h2>
+			<img src = "static/713.jpg" width ="300" height="400">
+
 			<h2>通樑古榕</h2>
+
 			<h2>易家仙人掌冰淇淋</h2>
+
 			<h2>跨海大橋</h2>
-			<h2>鯨魚洞</h2>
-			<h2>池東大早業玄武岩</h2>
-			<h2>原味漁村</h2>
-			<h2>鐘記燒餅</h2>
+			<img src = "static/71.jpg" width ="270" height="400">	
+
 			<h2>海底浮淺</h2>
+			<img src = "static/73.jpg" width ="300" height="380">	
+			<img src = "static/74.jpg" width ="300" height="380">
+			<img src = "static/78.jpg" width ="300" height="400">
 		</section>
 
 		<aside class="right">
 			<h3>我們的合照</h3>
+			<img src = "static/7.jpg" width ="300" height="400">	
+			<img src = "static/71.jpg" width ="270" height="400">	
+			<img src = "static/72.jpg" width ="400" height="350">	
+			<img src = "static/73.jpg" width ="300" height="380">	
+			<img src = "static/74.jpg" width ="300" height="380">	
+			<img src = "static/75.jpg" width ="300" height="400">		
+			<img src = "static/77.jpg" width ="300" height="400">	
+			<img src = "static/78.jpg" width ="300" height="400">	
 		</aside>
 
 		<footer>
 			Copyright ©  楊荃喜. 許翔順. All Rights Reserved.
 		</footer>
 	</main>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 </body>

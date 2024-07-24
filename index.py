@@ -245,27 +245,27 @@ html = """
 
        <header class="slideshow-container">
         <div class="mySlideshows fade">
-            <img src="static/428.jpg" style="width: 100%;">
+            <img src="static/428.jpg" style="width: 100%; height: 500px;">
             <div class="text">我們的愛情生活 -1</div>
         </div>
 
         <div class="mySlideshows fade">
-            <img src="static/112.jpg" style="width: 100%;">
+            <img src="static/112.jpg" style="width: 100%; height: 500px;">
             <div class="text">我們的愛情生活 - 2</div>
         </div>
 
         <div class="mySlideshows fade">
-            <img src="static/113.jpg" style="width: 100%;">
+            <img src="static/113.jpg" style="width: 100%; height: 500px;">
             <div class="text">我們的愛情生活 - 3</div>
         </div>
 
         <div class="mySlideshows fade">
-            <img src="static/14.jpg" style="width: 100%;">
+            <img src="static/14.jpg" style="width: 100%; height: 500px;">
             <div class="text">我們的愛情生活 - 4</div>
         </div>
 
         <div class="mySlideshows fade">
-            <img src="static/15.jpg" style="width: 100%;">
+            <img src="static/15.jpg" style="width: 100%; height: 500px;">
             <div class="text">我們的愛情生活 - 5</div>
         </div>
 
@@ -372,5 +372,5 @@ def photo3():
     return render_template("photo3.html")
 
 
-#if __name__ == "__main__":
-#  app.run()
+if __name__ == "__main__":
+  app.run()
