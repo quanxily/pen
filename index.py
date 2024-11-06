@@ -176,9 +176,19 @@ html = """
             font-size: 25px;
         }
 
+
         footer a:hover {
             color: pink;
         }
+
+
+        h5 {
+            border-style: dotted;
+            border-color: skyblue;
+            border-radius: 8px;
+            border-width: 8px;
+            font-size: 20pt;
+         }
 
         .row {
             display: flex;
@@ -203,6 +213,26 @@ html = """
             margin-bottom: 10px;
             overflow: hidden;
         }
+
+
+        h2 {
+            border-style: dotted;
+            border-color: beige;
+            border-radius: 8px;
+            border-width: 8px;
+            font-size: 20pt;
+         }
+
+         h3 {
+            border-style: dotted;
+            border-color: pink;
+            border-radius: 8px;
+            border-width: 8px;
+            font-size: 20pt;
+         }
+
+
+
     </style>
 </head>
 
@@ -233,7 +263,12 @@ html = """
         }
     </script>
     <nav id="myTopnav" class="topnav">
-        <div class="nav-left">T AND Q LOVE</div>
+        <div class="nav-left">
+            T AND Q LOVE
+
+            <a href="/" class="active">日常網站</a> |
+            <a href="/photo2">小櫻個人網站</a>
+        </div>
         <div class="nav-right" id="nav-right">
             <a href="/" class="active">首頁</a>
             <a href="/photo2">照片牆2</a>
@@ -322,24 +357,29 @@ html = """
         <article>
         <section class="row">
             <div class ="colum side">
-                <h3>我們的ig共同帳號</h3>
+                <h2>我 小櫻</h2>
+                <img src = "static/112.jpg" width ="300" height="350">
                 
             </div>
                 
             <div class ="colum middle">
-                <h3>運動紀錄片</h3>
-                <p style="color:#f2a30f">下面是我與寶寶一起健身的影片</p>
+                <h3>已經相愛了</h3>
+                <p style="color:#f2a30f">一年半啦!</p>
+
+                <h3>其它的網頁連結</h3>
+                    <p>日常網站</p>
+                    <img src = "static/623.jpg" width ="300" height="350">
+                    <p>小櫻網站</p>
                 
             </div>
 
             <div class="colum side">
-                <h2>健身前後的感受</h2>
-                <p style="color:#c16fd1">學員:荃喜寶寶想對教練翔順寶寶說的話:謝謝你對我耐心的訓練以及買奶昔給我增重,寶寶在訓練我時我真的覺得好折磨,畢竟我是個不愛運動的人,但遇到你我慈知道運動的有趣,謝謝你我會努力好好練出我的馬甲線的</p>
-
-                <p style="color:#f2a30f">寶寶想對學員說的話以及教人的心得:</p>
+                <h2>他 小順</h2>
+                <img src = "static/113.jpg" width ="300" height="350">
             </div>
         </section>
     </article>
+
     </main>
     <footer>
         <a href="https://www.instagram.com/tq.__1314/"><i class="fa-brands fa-instagram-square"></i>Ig</a>
@@ -372,5 +412,5 @@ def photo3():
     return render_template("photo3.html")
 
 
-if __name__ == "__main__":
-  app.run()
+#if __name__ == "__main__":
+#  app.run()
